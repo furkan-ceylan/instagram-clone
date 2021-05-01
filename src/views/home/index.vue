@@ -86,7 +86,7 @@
           <p><CustomText tag="b" size="large">Follow</CustomText></p>
         </div>
       </div>
-            <div class="sidebar-sug-profile">
+      <div class="sidebar-sug-profile">
         <div class="head-avatar">
           <img
             src="https://img.pngio.com/profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png"
@@ -131,6 +131,7 @@ export default {
   max-width: 685px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
 }
 .timeline {
   padding-right: 10px;
