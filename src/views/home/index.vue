@@ -131,10 +131,6 @@ export default {
   max-width: 685px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-}
-.timeline {
-  padding-right: 10px;
 }
 
 .sidebar {
@@ -162,6 +158,11 @@ export default {
     grid-template-columns: 1fr 295px;
     grid-gap: 30px;
   }
+
+  .timeline {
+  padding-right: 10px;
+}
+
 
   .sidebar {
     display: block;
