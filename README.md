@@ -1,5 +1,7 @@
 # instagramclone
 
+Live Demo: https://insta-clone-vue.netlify.app/
+
 ## Project setup
 ```
 npm install
