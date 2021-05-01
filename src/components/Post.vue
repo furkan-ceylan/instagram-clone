@@ -191,7 +191,7 @@ export default {
 
 .post-media {
   min-width: 100px;
-  min-height: 400px;
+  min-height: 100px;
   background-color: rgb(245, 245, 245);
 }
 
