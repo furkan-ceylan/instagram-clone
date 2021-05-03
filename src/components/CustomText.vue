@@ -30,6 +30,12 @@ export default {
 .xlarge {
   font-size: 16px;
 }
+.xllarge {
+  font-size: 18px;
+}
+.xxlarge {
+  font-size: 28px;
+}
 .small {
   font-size: 12px;
 }
