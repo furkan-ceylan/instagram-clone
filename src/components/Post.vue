@@ -75,7 +75,7 @@
         <Emoji />
       </button>
       <form class="comment-form commentline">
-        <input type="Text" placeholder="Comment..."/>
+        <button type="Text" placeholder="Comment..."/>
       </form>
       <button class="action-share" type="button">
         <CustomText tag="b" size="large">Paylaş</CustomText>
