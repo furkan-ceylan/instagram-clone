@@ -6,6 +6,11 @@
         <router-view />
       </Container>
     </main>
+          <Container>
+    <footer>
+      <Footer />
+    </footer>
+    </Container>
   </div>
 </template>
 
@@ -13,6 +18,7 @@
 import Header from "./components/Header";
 import CustomText from "./components/CustomText";
 import Container from "./components/Container.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -20,6 +26,7 @@ export default {
     Header,
     CustomText,
     Container,
+    Footer
   },
 };
 </script>
