@@ -156,7 +156,7 @@ export default {
     max-width: none;
     display: grid;
     grid-template-columns: 1fr 295px;
-    grid-gap: 30px;
+    grid-gap: 10px;
   }
 
   .timeline {
