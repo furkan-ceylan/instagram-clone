@@ -27,6 +27,11 @@
           <IconExploreFill v-if="$route.name === 'Explore'" />
           <IconExplore v-else />
         </router-link>
+        <div class="icon-like">
+        <router-link to="">
+          <IconLike />
+        </router-link>
+        </div>
         <router-link to="/profile">
           <img
             src="https://img.pngio.com/profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png"
@@ -49,6 +54,7 @@ import IconDirect from "@/icons/direct.svg";
 import IconDirectFill from "@/icons/direct-fill.svg";
 import IconExplore from "@/icons/explore.svg";
 import IconExploreFill from "@/icons/explore-fill.svg";
+import IconLike from "@/icons/like.svg";
 
 export default {
   name: "Header",
@@ -60,6 +66,7 @@ export default {
     IconDirectFill,
     IconExplore,
     IconExploreFill,
+    IconLike,
     Avatar,
   },
 };
@@ -111,6 +118,10 @@ export default {
   padding-bottom: 5px;
 }
 
+.icon-like{
+  display: none;
+}
+
 @media screen and (min-width: 980px) {
   .nav3 {
     height: auto;
@@ -143,5 +154,9 @@ export default {
     height: 52px;
     
   }
+
+  .icon-like{
+  display: inherit;
+}
 }
 </style>
