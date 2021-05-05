@@ -24,6 +24,24 @@
         />
       </div>
     </div>
+    <div class="share-photos-mob">
+    <div class="save-icon">
+      <img src="../../img/photos.png" alt="" />
+    </div>
+    <div class="save-text">
+      <div class="save-text1">
+      <CustomText class="thin" size="xlarge">
+        Share Photos
+      </CustomText>
+      </div>
+      <br />
+      <div class="save-text2">
+      <CustomText size="normal">
+        When you share photos, they will appear on your profile.
+      </CustomText>
+      </div>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -40,16 +58,64 @@ export default {
 
 <style scoped>
 .post {
+  background-color: rgb(250,250,250);
+}
+.post-media{
+  display: none;
+}
+
+.share {
+  display: none;
+}
+
+.download-media {
+  display: none;
+}
+
+.share-photos-mob { 
+  display: flex;
+  flex-direction: column;
+  margin-left:auto;
+  margin-right:auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-photos-mob .save-text {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.share-photos-mob .save-text2 {
+  max-width: 300px;
+  max-height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.thin {
+  font-weight: 100;
+  font-size: 25px;
+}
+
+
+@media screen and (min-width: 980px) {
+.post {
   background-color: white;
   display: flex;
   justify-content: space-between;
 }
 .post-media {
+  display: inherit;
   width: 380px;
   height: 380px;
 }
 
 .share {
+  display: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,6 +124,7 @@ export default {
 }
 
 .download-media {
+  display: inherit;
   width: 135px;
   height: 40px;
   display: flex;
@@ -65,5 +132,10 @@ export default {
   padding-right: 120px;
   padding-top: 25px;
   cursor:pointer;
+}
+
+.share-photos-mob {
+  display: none;
+}
 }
 </style>
