@@ -11,11 +11,17 @@
       </div>
       <div class="head-profile-detail">
         <div class="detail-name">
-          <CustomText class="thin" size="xxlarge">username</CustomText>
-          <button class="action-edit" type="button">
-            <CustomText tag="b" size="normal">Edit Profile</CustomText>
-          </button>
-          <IconOptions />
+          <div class="detail-name-username">
+            <CustomText class="thin" size="xxlarge">username</CustomText>
+          </div>
+          <div class="detail-name-edit">
+            <button class="action-edit" type="button">
+              <CustomText tag="b" size="normal">Edit Profile</CustomText>
+            </button>
+          </div>
+          <div class="icon-options">
+            <IconOptions />
+          </div>
         </div>
         <div class="detail-numbers">
           <div class="number-1">
@@ -36,29 +42,79 @@
         </div>
       </div>
     </div>
+    <div class="detail-numbers-mob">
+      <div class="number-1">
+        <CustomText tag="b" size="xlarge">5 </CustomText>
+        <CustomText size="xlarge">posts</CustomText>
+      </div>
+      <div class="number-1">
+        <CustomText tag="b" size="xlarge">124 </CustomText>
+        <CustomText size="xlarge">followers</CustomText>
+      </div>
+      <div class="number-1">
+        <CustomText tag="b" size="xlarge">135 </CustomText>
+        <CustomText size="xlarge">following</CustomText>
+      </div>
+    </div>
     <div class="tabs">
-      <div class="tabs-item">
+      <div>
         <router-link to="/profile">
           <IconPostsFill v-if="$route.name === 'ProfilePost'" />
-          <IconPosts v-else /> POSTS
+          <IconPosts v-else />
+          <span
+            :class="[
+              $route.name === 'ProfilePost'
+                ? 'tabs-item-active'
+                : 'tabs-item-deactive',
+            ]"
+          >
+            POSTS</span
+          >
         </router-link>
       </div>
-      <div class="tabs-item">
+      <div>
         <router-link to="/profile/igtv">
           <IconIGTVFill v-if="$route.name === 'ProfileIGTV'" />
-          <IconIGTV v-else /> IGTV</router-link
-        >
+          <IconIGTV v-else />
+          <span
+            :class="[
+              $route.name === 'ProfileIGTV'
+                ? 'tabs-item-active'
+                : 'tabs-item-deactive',
+            ]"
+          >
+            IGTV</span
+          >
+        </router-link>
       </div>
-      <div class="tabs-item">
+      <div>
         <router-link to="/profile/save">
           <IconSavedFill v-if="$route.name === 'ProfileSave'" />
-          <IconSaved v-else /> SAVED</router-link
-        >
+          <IconSaved v-else />
+          <span
+            :class="[
+              $route.name === 'ProfileSave'
+                ? 'tabs-item-active'
+                : 'tabs-item-deactive',
+            ]"
+          >
+            SAVED</span
+          >
+        </router-link>
       </div>
-      <div class="tabs-item">
+      <div>
         <router-link to="/profile/tag">
           <IconTaggedFill v-if="$route.name === 'ProfileTag'" />
-          <IconTagged v-else /> TAGGED</router-link
+          <IconTagged v-else />
+          <span
+            :class="[
+              $route.name === 'ProfileTag'
+                ? 'tabs-item-active'
+                : 'tabs-item-deactive',
+            ]"
+          >
+            TAGGED</span
+          ></router-link
         >
       </div>
     </div>
@@ -103,9 +159,77 @@ export default {
 
 <style scoped>
 .home {
-  max-width: 685px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.profile-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.head-avatar {
+  min-width: 150px;
+  min-height: 150px;
+  overflow: hidden;
+}
+.icon-options {
+  display: none;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.head-profile-detail {
+  padding-left: 20px;
+}
+
+.detail-name {
+  padding-top: 20px;
+}
+
+.detail-numbers {
+  display: none;
+}
+
+.detail-info {
+  padding-top: 15px;
+}
+
+.action-edit {
+  border: 1px solid rgb(209, 209, 209);
+  padding: 0.3rem;
+  border-radius: 3px;
+  min-width: 200px;
+}
+
+.detail-numbers-mob {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  border-top: 2px solid rgb(231, 231, 231);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.detail-numbers-mob .number-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border-top: 2px solid rgb(231, 231, 231);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.tabs span {
+  display: none;
 }
 
 @media screen and (min-width: 980px) {
@@ -138,16 +262,22 @@ export default {
     border-top: 2px solid rgb(231, 231, 231);
   }
 
-  .tabs-item {
+  .tabs-item-deactive {
     color: #aaa;
   }
 
-  .tabs-item:active {
+  .tabs-item-active {
     color: black;
+    border-top: 1px solid black;
+    padding-top:15px
   }
+
   .tab-view {
     display: block;
-    background-color: lightpink;
+  }
+
+  .tabs span {
+    display: inherit;
   }
 
   .head-avatar {
@@ -199,6 +329,10 @@ export default {
     border: 1px solid rgb(209, 209, 209);
     padding: 0.3rem;
     border-radius: 3px;
+    margin-left: 20px;
+  }
+  .detail-numbers-mob {
+    display: none;
   }
 }
 </style>
