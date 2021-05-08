@@ -132,11 +132,9 @@ export default {
   margin-left: auto;
   margin-right: auto;
 }
-
 .sidebar {
   display: none;
 }
-
 .stories {
   border-radius: 3px;
   border: 1px solid rgb(209, 209, 209);
@@ -163,21 +161,17 @@ export default {
   padding-right: 10px;
 }
 
-
   .sidebar {
     display: block;
   }
-
   .head-avatar {
     display: inline-flex;
     border-radius: 50%;
     cursor: pointer;
   }
-
   .head-avatar img {
     border-radius: 50%;
   }
-
   .sidebar-profile {
     margin-bottom: 20px;
     height: 115px;
@@ -186,7 +180,6 @@ export default {
     align-items: center;
     padding: 5px;
   }
-
   .sidebar-sug-profile {
     height: 45px;
     display: flex;
