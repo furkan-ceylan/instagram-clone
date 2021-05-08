@@ -33,6 +33,7 @@ export default {
     text-decoration: none;
     align-items: center;
     margin: 30px;
+    background-color:rgb(250,250,250);
 }
 
 .footer ul {
