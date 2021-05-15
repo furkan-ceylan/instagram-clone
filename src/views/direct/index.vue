@@ -1,4 +1,5 @@
 <template>
+<div class="main">
   <div class="direct">
     <div class="sidebar">
       <div class="sidebar-username">
@@ -153,6 +154,7 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -169,6 +171,9 @@ export default {
 </script>
 
 <style scoped>
+.main{
+  height:75vh;
+}
 .direct {
   display: grid;
   grid-template-columns: 350px 1fr;
