@@ -27,13 +27,18 @@ export default {
 
 <style>
 
+.footer{
+    display: none;
+}
+
+
+@media screen and (min-width: 980px) {
 .footer {
     display: flex;
     flex-direction: column;
     text-decoration: none;
     align-items: center;
-    margin: 30px;
-    background-color:rgb(250,250,250);
+    padding: 40px;
 }
 
 .footer ul {
@@ -53,6 +58,7 @@ export default {
     color: darkgray;
     font-weight: 500;
     font-size: 12px;
+}
 }
 
 </style>

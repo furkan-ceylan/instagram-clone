@@ -111,7 +111,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  
 }
 
 .nav3 img {

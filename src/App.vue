@@ -6,11 +6,13 @@
         <router-view />
       </Container>
     </main>
-          <Container>
-    <footer>
+          
+    <footer class="footer__">
+      <Container>
       <Footer />
+      </Container>
     </footer>
-    </Container>
+    
   </div>
 </template>
 
@@ -34,6 +36,9 @@ export default {
 <style scoped>
 .main {
   padding-top: 40px;
+  background-color: rgb(250, 250, 250);
+}
+.footer__{
   background-color: rgb(250, 250, 250);
 }
 </style>
